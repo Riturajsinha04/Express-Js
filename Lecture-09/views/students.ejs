@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students Data</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            padding: 40px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        h1.main-heading {
+            text-align: center;
+            color: white;
+            margin-bottom: 30px;
+            font-size: 36px;
+            text-transform: capitalize;
+        }
+
+        .student-card {
+            background-color: white;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .student-card h2 {
+            color: #1e3c72;
+            margin-bottom: 10px;
+        }
+
+        .student-card p {
+            font-size: 18px;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        .label {
+            font-weight: bold;
+            color: #2a5298;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <h1 class="main-heading">Students Data Profile</h1>
+
+        <% allstudent.forEach((element) => { %>
+
+            <div class="student-card">
+                <h2><%= element.name %></h2>
+                <p><span class="label">Id:</span><%= element.id %></p>
+                <p><span class="label">Age:</span><%= element.age %></p>
+                <p><span class="label">Course:</span><%= element.course %></p>
+                 <p><span class="label">Email:</span><%= element.email %></p>
+
+                <a href="/delete/<%=element.id%>">Delete</a>
+                <a href="/edit/<%=element.id%>">Edit</a>
+            </div>
+
+        <% }) %>
+
+    </div>
+
+</body>
+</html>
