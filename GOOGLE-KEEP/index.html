@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Google Keep Clone</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="left-nav">
+      <span class="material-icons-outlined menu-icon">menu</span>
+
+      <div class="logo-box">
+        <div class="bulb"></div>
+        <span>Keep</span>
+      </div>
+    </div>
+
+    <div class="search-box">
+      <span class="material-icons-outlined">search</span>
+      <input type="text" placeholder="Search" />
+    </div>
+
+    <div class="right-nav">
+      <span class="material-icons-outlined">refresh</span>
+      <span class="material-icons-outlined">view_agenda</span>
+      <span class="material-icons-outlined">settings</span>
+      <span class="material-icons-outlined">apps</span>
+      <div class="profile">R</div>
+    </div>
+  </header>
+
+  <aside class="sidebar">
+    <div class="side-item active">
+      <span class="material-icons-outlined">lightbulb</span>
+    </div>
+
+    <div class="side-item">
+      <span class="material-icons-outlined">notifications</span>
+    </div>
+
+    <div class="side-item">
+      <span class="material-icons-outlined">edit</span>
+    </div>
+
+    <div class="side-item">
+      <span class="material-icons-outlined">archive</span>
+    </div>
+
+    <div class="side-item">
+      <span class="material-icons-outlined">delete</span>
+    </div>
+  </aside>
+
+  <main class="main-content">
+    <div class="note-input">
+      <input type="text" placeholder="Take a note..." />
+      <div class="note-icons">
+        <span class="material-icons-outlined">check_box</span>
+        <span class="material-icons-outlined">brush</span>
+        <span class="material-icons-outlined">image</span>
+      </div>
+    </div>
+
+    <div class="empty-state">
+      <span class="material-icons-outlined big-bulb">lightbulb</span>
+      <p>Notes you add appear here</p>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
