@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Store Data</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f1f5f9;
+            min-height: 100vh;
+            padding: 30px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #111827;
+            margin-bottom: 25px;
+            font-size: 36px;
+        }
+
+        .top-box {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .home {
+            text-decoration: none;
+            background: #111827;
+            color: white;
+            padding: 11px 18px;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        .home:hover {
+            background: #374151;
+        }
+
+        .search-box {
+            display: flex;
+            gap: 10px;
+        }
+
+        .search-box input {
+            padding: 11px;
+            width: 250px;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            outline: none;
+            font-size: 15px;
+        }
+
+        .search-box button {
+            padding: 11px 18px;
+            background: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .search-box button:hover {
+            background: #1d4ed8;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 22px;
+            margin-top: 25px;
+        }
+
+        .card {
+            background: white;
+            padding: 22px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card p {
+            margin-bottom: 13px;
+            font-size: 17px;
+            color: #111827;
+        }
+
+        .card strong {
+            color: #2563eb;
+        }
+
+        .actions {
+            margin-top: 18px;
+        }
+
+        .actions a {
+            text-decoration: none;
+            padding: 9px 14px;
+            border-radius: 7px;
+            margin-right: 8px;
+            font-weight: bold;
+        }
+
+        .edit {
+            background: #16a34a;
+            color: white;
+        }
+
+        .delete {
+            background: #dc2626;
+            color: white;
+        }
+
+        .edit:hover {
+            background: #15803d;
+        }
+
+        .delete:hover {
+            background: #b91c1c;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Mobile Store Data</h1>
+
+    <div class="top-box">
+        <a href="/" class="home">Back to Home</a>
+
+        <form action="/search" method="GET" class="search-box">
+            <input type="text" name="brand" placeholder="Search by Brand">
+            <button type="submit">Search</button>
+        </form>
+    </div>
+
+    <div class="container">
+
+        <% allMobile.forEach((element) => { %>
+
+            <div class="card">
+
+                <p><strong>Brand:</strong> <%= element.brand %></p>
+
+                <p><strong>Model:</strong> <%= element.model %></p>
+
+                <p><strong>RAM:</strong> <%= element.ram %></p>
+
+                <p><strong>Storage:</strong> <%= element.storage %></p>
+
+                <p><strong>Price:</strong> ₹<%= element.price %></p>
+
+                <div class="actions">
+                    <a href="/edit/<%= element._id %>" class="edit">Edit</a>
+                    <a href="/delete/<%= element._id %>" class="delete">Delete</a>
+                </div>
+
+            </div>
+
+        <% }) %>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Mobile</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    color: white;
+    margin-bottom: 25px;
+    font-size: 35px;
+    letter-spacing: 1px;
+}
+
+.form-box {
+    width: 400px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.form-box input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 18px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+}
+
+.form-box input:focus {
+    border-color: #2a5298;
+    box-shadow: 0 0 5px rgba(42, 82, 152, 0.5);
+}
+
+.form-box button {
+    width: 100%;
+    padding: 12px;
+    background-color: #1e3c72;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 17px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.form-box button:hover {
+    background-color: #16315e;
+}
+
+a {
+    margin-top: 20px;
+    color: white;
+    text-decoration: none;
+    background-color: #111;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+a:hover {
+    background-color: #333;
+}
+    </style>
+
+    <h1>Add Mobile</h1>
+
+    <form action="/add" method="POST" class="form-box">
+        <input type="text" name="brand" placeholder="Enter Brand" required>
+
+        <input type="text" name="model" placeholder="Enter Model" required>
+
+        <input type="text" name="ram" placeholder="Enter RAM" required>
+
+        <input type="text" name="storage" placeholder="Enter Storage" required>
+
+        <input type="number" name="price" placeholder="Enter Price" required>
+
+        <button type="submit">Add Mobile</button>
+    </form>
+
+    <a href="/">Back</a>
+
+</body>
+</html>

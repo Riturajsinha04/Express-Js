@@ -1,0 +1,130 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Mobile</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #141e30, #243b55);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        h1 {
+            color: white;
+            margin-bottom: 25px;
+            font-size: 36px;
+            letter-spacing: 1px;
+        }
+
+        form {
+            width: 400px;
+            background-color: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+        }
+
+        input {
+            width: 100%;
+            padding: 13px;
+            margin-bottom: 18px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 15px;
+            outline: none;
+        }
+
+        input:focus {
+            border-color: #243b55;
+            box-shadow: 0 0 6px rgba(36, 59, 85, 0.5);
+        }
+
+        button {
+            width: 100%;
+            padding: 13px;
+            background-color: #141e30;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 17px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #243b55;
+            transform: scale(1.02);
+        }
+
+        .link-box {
+            display: flex;
+            gap: 15px;
+            margin-top: 22px;
+        }
+
+        .link-box a {
+            color: white;
+            text-decoration: none;
+            padding: 11px 18px;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        .home-btn {
+            background-color: #2563eb;
+        }
+
+        .data-btn {
+            background-color: #000;
+        }
+
+        .home-btn:hover {
+            background-color: #1d4ed8;
+        }
+
+        .data-btn:hover {
+            background-color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Add Mobile</h1>
+
+    <form action="/createdata" method="POST">
+
+        <input type="text" name="brand" placeholder="Enter Brand" required>
+
+        <input type="text" name="model" placeholder="Enter Model" required>
+
+        <input type="text" name="ram" placeholder="Enter RAM" required>
+
+        <input type="text" name="storage" placeholder="Enter Storage" required>
+
+        <input type="number" name="price" placeholder="Enter Price" required>
+
+        <button type="submit">Add Mobile</button>
+
+    </form>
+
+    <div class="link-box">
+        <a href="/" class="home-btn">Back to Home</a>
+        <a href="/getdata" class="data-btn">Back to Mobile Data</a>
+    </div>
+
+</body>
+</html>

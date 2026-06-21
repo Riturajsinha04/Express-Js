@@ -1,0 +1,104 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Store Management</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #e0f2fe, #dbeafe, #f8fafc);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .main-box {
+            width: 520px;
+            background: white;
+            padding: 45px 35px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+
+        .icon {
+            font-size: 55px;
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            color: #0f172a;
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #64748b;
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+
+        .btn-box {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        a {
+            text-decoration: none;
+            padding: 15px;
+            border-radius: 12px;
+            font-size: 18px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .view-btn {
+            background-color: #2563eb;
+            color: white;
+        }
+
+        .add-btn {
+            background-color: #16a34a;
+            color: white;
+        }
+
+        .view-btn:hover {
+            background-color: #1d4ed8;
+            transform: translateY(-3px);
+        }
+
+        .add-btn:hover {
+            background-color: #15803d;
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main-box">
+
+        <div class="icon">📱</div>
+
+        <h1>Mobile Store Management</h1>
+
+        <p>Manage mobile records, prices, storage and models easily.</p>
+
+        <div class="btn-box">
+            <a href="http://localhost:3000/getdata" class="view-btn">View All Mobile Data</a>
+            <a href="http://localhost:3000/insertdata" class="add-btn">Add New Mobile</a>
+        </div>
+
+    </div>
+
+</body>
+</html>
